@@ -9,6 +9,11 @@ namespace Lab0
         public Position Position { get; set; }
         public Color Color { get; set; }
 
+        public virtual string Name
+        {
+            get { return "Desconhecida"; }
+        }
+
         public Piece()
         {
             Position = new Position();

@@ -6,25 +6,18 @@ namespace Lab0
     {
         static void Main(string[] args)
         {
-            Pawn pawn = new Pawn(
-                Color.White,
-                new Position(0, 1)
-            );
+            Piece[] pieces = {
 
-            Rook rook = new Rook(
-                Color.Black,
-                new Position(0, 7)
-            );
+                new Pawn(Color.White, new Position(0, 1)),
+                new Rook(Color.Black, new Position(0, 7)),
+                new Pawn(Color.Black, new Position(4, 6)),
+                new Rook(Color.White, new Position(7, 0)),
+            };
 
-            Console.WriteLine($"Peão: {pawn}");
-            Console.WriteLine($"Cor do peão: {pawn.Color}");
-            Console.WriteLine($"Posição do peão: {pawn.Position}");
-
-            Console.WriteLine();
-
-            Console.WriteLine($"Torre: {rook}");
-            Console.WriteLine($"Cor da torre: {rook.Color}");
-            Console.WriteLine($"Posição da torre: {rook.Position}");
+            foreach (Piece piece in pieces)
+            {
+                Console.WriteLine($"Nome: {piece.Name} | Posição: {piece.Position}");
+            }
         }
     }
 }

@@ -11,6 +11,11 @@ namespace Lab0
         {
         }
 
+        public override string Name
+        {
+            get { return "Rook"; }
+        }
+
         public override string ToString()
         {
             return $"T{base.ToString()}";
