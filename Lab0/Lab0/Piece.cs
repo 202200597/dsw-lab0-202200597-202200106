@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Lab0
 {
-    public abstract class Piece
+    public abstract class Piece: IMovable
     {
         public Position Position { get; set; }
         public Color Color { get; set; }
@@ -12,6 +12,21 @@ namespace Lab0
         public virtual string Name
         {
             get { return "Desconhecida"; }
+        }
+
+        public bool IsWhite
+        {
+            get { return Color == Color.White; }
+        }
+
+        public bool IsBlack
+        {
+            get { return Color == Color.Black; }
+        }
+
+        public virtual string Symbol
+        {
+            get { return "?"; }
         }
 
         public Piece()
@@ -30,5 +45,7 @@ namespace Lab0
         {
             return Position.ToString();
         }
+
+        public abstract void Move(int dx, int dy);
     }
 }

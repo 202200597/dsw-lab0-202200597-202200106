@@ -16,6 +16,20 @@ namespace Lab0
             get { return "Rook"; }
         }
 
+        public override string Symbol
+        {
+            get { return "R"; }
+        }
+
+        public override void Move(int dx, int dy)
+        {
+            if (dx == 0 || dy == 0)
+            {
+                Position.X += dx;
+                Position.Y += dy;
+            }
+        }
+
         public override string ToString()
         {
             return $"T{base.ToString()}";

@@ -16,6 +16,19 @@ namespace Lab0
             get { return "Pawn"; }
         }
 
+        public override string Symbol
+        {
+            get { return "P"; }
+        }
+
+        public override void Move(int dx, int dy)
+        {
+            if (dx == 0)
+            {
+                Position.Y += dy;
+            }
+        }
+
         public override string ToString()
         {
             return base.ToString();
