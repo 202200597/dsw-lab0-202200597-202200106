@@ -6,12 +6,25 @@ namespace Lab0
     {
         static void Main(string[] args)
         {
-            Position position1 = new Position();
+            Pawn pawn = new Pawn(
+                Color.White,
+                new Position(0, 1)
+            );
 
-            Position position2 = new Position(4, 6);
+            Rook rook = new Rook(
+                Color.Black,
+                new Position(0, 7)
+            );
 
-            Console.WriteLine($"Posição 1: {position1}");
-            Console.WriteLine($"Posição 2: {position2}");
+            Console.WriteLine($"Peão: {pawn}");
+            Console.WriteLine($"Cor do peão: {pawn.Color}");
+            Console.WriteLine($"Posição do peão: {pawn.Position}");
+
+            Console.WriteLine();
+
+            Console.WriteLine($"Torre: {rook}");
+            Console.WriteLine($"Cor da torre: {rook.Color}");
+            Console.WriteLine($"Posição da torre: {rook.Position}");
         }
     }
 }
